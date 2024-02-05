@@ -1,0 +1,15 @@
+{
+  "name": "ultra-gia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron . --unhandled-rejections=strict"
+  },
+  "author": "pizda",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.2.1"
+  }
+}
