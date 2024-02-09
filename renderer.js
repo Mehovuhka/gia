@@ -81,11 +81,6 @@ function createAuthoPage() {
   })
 }
 
-
-
-
-
-
 function createHomePage() {
   const namee = JSON.parse(localStorage.getItem("name"))
   const divHome =  document.createElement('div')
@@ -118,4 +113,67 @@ function createModalExit(divHome) {
   })
 }
 
+
+// -- CREATE TABLE roles
+// -- (
+// --     id_role SERIAL PRIMARY KEY,
+// -- 	name_role CHARACTER VARYING(30) unique not null
+	
+// -- );
+
+// -- CREATE TABLE users
+// -- (
+// --     id_user SERIAL PRIMARY KEY,
+// --     name_user CHARACTER VARYING(50) unique not null,
+// --     login_user CHARACTER VARYING(20) unique not null,
+// -- 	password_user CHARACTER VARYING(20) unique not null,
+// -- 	phone_user bigint unique not null,
+// -- 	user_role integer references roles (id_role) not null
+// -- );
+
+// -- CREATE TABLE statuses
+// -- (
+// --     id_status SERIAL PRIMARY KEY,
+// -- 	name_status CHARACTER VARYING(30) unique not null
+	
+// -- );
+
+// -- CREATE TABLE machines
+// -- (
+// --     id_machine SERIAL PRIMARY KEY,
+// -- 	name_machine CHARACTER VARYING(30) unique not null
+	
+// -- );
+
+// -- CREATE TABLE problems
+// -- (
+// --     id_problem SERIAL PRIMARY KEY,
+// -- 	name_problem CHARACTER VARYING(30) unique not null
+	
+// -- );
+
+// -- CREATE TABLE zayavka
+// -- (
+// --     id_zayavka SERIAL PRIMARY KEY,
+// -- 	customer integer references users (id_user) not null,
+// -- 	rabotnik integer references users (id_user) not null,
+// --     type_machine integer references machines (id_machine) not null,
+// -- 	type_problem integer references problems (id_problem) not null,
+// -- 	text_problem CHARACTER VARYING(200),
+// -- 	repair_status integer references statuses (id_status) not null
+// -- );
+
+// -- insert into roles (name_role) values ('Заказчик'), ('Чинила'), ('Манагер')
+// -- insert into users (name_user, login_user, password_user, phone_user, user_role) values 
+// -- ('Алексей Гавкин', 'alexgov1n', 'gavk1n', 1992223344, 1),
+// -- ('Михаил Шкафка', 'miha2002', 'khav1ka', 1997223354, 1),
+// -- ('Игорь Скрутов', 'scru11', 'igor123', 1792293344, 2),
+// -- ('Антонио Лепс', 'ant0n10', '2leps2', 1994223345, 2),
+// -- ('Роберт Малахов', 'malakhov1ni', 'r0pert1n1', 1978923344, 3)
+// -- insert into statuses (name_status) values ('В обработке'), ('Обследование'), ('В работе'), ('Ремонт завершен')
+// -- insert into machines (name_machine) values ('Компьтер'), ('Холодильник'), ('Электрическая плита'), ('Сервер'), ('Моноблок')
+// -- insert into problems (name_problem) values ('Не работает'), ('Не стартует'), ('Высокие температуры'), ('Оголился провод'), 
+// -- ('Короткое замыкание'), ('Нет изображения'), ('Не холодит'), ('Сломана ножка крепления'), ('Вмятина на корпусе'), ('Не работают юсб порты')
+// -- insert into zayavka (customer, rabotnik, type_machine, type_problem, text_problem, repair_status) values
+// -- (1, 3, 1, 2, 'Плоха все вообьще писец', 2)
 
